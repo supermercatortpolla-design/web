@@ -1,0 +1,14 @@
+{
+  "name": "rossotono-polla-website",
+  "version": "1.0.0",
+  "description": "RossoTono Market Polla website with AI chatbot",
+  "scripts": {
+    "build": "echo 'Static site - no build required'"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

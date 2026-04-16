@@ -1,0 +1,128 @@
+{
+  "store": {
+    "name": "RossoTono Market Polla",
+    "brand": "RossoTono Supermercati",
+    "address": "Via Cotrazzo 2, 84038 Polla (SA)",
+    "phone": "0975 1902032",
+    "email": "supermercatort.polla@gmail.com",
+    "website": "https://www.rossotono.it",
+    "flyer_url": "https://promosulweb.it/nuovaperturamarket/"
+  },
+  "hours": {
+    "weekday": "08:00 - 20:30",
+    "weekday_label": "Lunedì - Sabato",
+    "sunday": "09:00 - 13:00",
+    "sunday_label": "Domenica"
+  },
+  "location": {
+    "city": "Polla",
+    "province": "Salerno (SA)",
+    "region": "Campania",
+    "country": "Italia",
+    "coordinates": {
+      "lat": 40.5145759,
+      "lng": 15.5043953
+    },
+    "google_maps": "https://maps.app.goo.gl/2vKNSY28oiyXcP2M9"
+  },
+  "social": {
+    "instagram": "https://instagram.com/rossotono",
+    "tiktok": "https://tiktok.com/@rossotonosupermercati",
+    "facebook": "https://facebook.com/RossotonoSupermercati"
+  },
+  "services": {
+    "parking": true,
+    "parking_notes": "Parcheggio gratuito disponibile",
+    "bancomat_pos": true,
+    "credit_cards": true,
+    "electronic_receipt": true,
+    "phone_recharge": false,
+    "home_delivery": false,
+    "gastronomia": true,
+    "gastronomia_notes": "Gastronomia artigianale con prodotti freschi preparati daily",
+    "macelleria": true,
+    "macelleria_notes": "Carne da filiera certificata, macelleria al banco",
+    "pescheria": false,
+    "panetteria": true,
+    "prodotti_freschi": true,
+    "prodotti_italiani": true,
+    "dop_products": true,
+    "dop_notes": "Parmigiano Reggiano DOP e altri prodotti certificati"
+  },
+  "payment_methods": [
+    "Contanti",
+    "Bancomat",
+    "Carte di credito (Visa, Mastercard)",
+    "POS"
+  ],
+  "values": [
+    "Qualità italiana garantita",
+    "Prodotti rigorosamente italiani",
+    "Convenienza senza compromessi",
+    "Freschezza quotidiana"
+  ],
+  "products_highlight": [
+    {
+      "category": "Gastronomia",
+      "description": "Prodotti freschi preparati daily, specialità locali"
+    },
+    {
+      "category": "Macelleria",
+      "description": "Carne da filiera certificata, tagli su richiesta"
+    },
+    {
+      "category": "Parmigiano Reggiano DOP",
+      "description": "Parmigiano di qualità superiore"
+    },
+    {
+      "category": "Prodotti RT",
+      "description": "Marchio proprio RossoTono, qualità a prezzo conveniente"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Quali sono gli orari di apertura?",
+      "answer": "Siamo aperti da Lunedì a Sabato dalle 08:00 alle 20:30. La Domenica siamo aperti dalle 09:00 alle 13:00."
+    },
+    {
+      "question": "Dove vi trovate?",
+      "answer": "Ci troviamo a Polla (SA), in Via Cotrazzo 2, CAP 84038. Abbiamo un parcheggio gratuito per i clienti."
+    },
+    {
+      "question": "Come posso contattarvi?",
+      "answer": "Puoi chiamarci al numero 0975 1902032 oppure scriverci una email a supermercatort.polla@gmail.com."
+    },
+    {
+      "question": "Dove posso vedere le offerte?",
+      "answer": "Puoi consultare il volantino online cliccando sul pulsante 'Sfoglia il Volantino' nella homepage. Aggiorniamo le offerte settimanalmente!"
+    },
+    {
+      "question": "Accettate pagamenti con carta?",
+      "answer": "Sì, accettiamo Bancomat, carte di credito (Visa, Mastercard) e pagamenti in contanti."
+    },
+    {
+      "question": "Avete il parcheggio?",
+      "answer": "Sì, disponiamo di un parcheggio gratuito per tutti i nostri clienti."
+    },
+    {
+      "question": "Quali servizi offrite?",
+      "answer": "Offriamo: Macelleria con carne da filiera certificata, Gastronomia artigianale, Panetteria, Prodotti DOP come Parmigiano Reggiano, e una vasta selezione di prodotti italiani di qualità."
+    },
+    {
+      "question": "Fate consegne a domicilio?",
+      "answer": "Al momento non offriamo servizio di consegna a domicilio, ma siamo sempre disponibili per eventuali esigenze particolari - contattaci!"
+    },
+    {
+      "question": "Avete prodotti senza glutine?",
+      "answer": "Sì, abbiamo una sezione dedicata ai prodotti senza glutine e per celiaci. Chiedi al nostro personale per essere indirizzato."
+    },
+    {
+      "question": "Posso pagare con il telefonino?",
+      "answer": "Attualmente accettiamo Bancomat, carte di credito e contanti. Per pagamenti contactless con smartphone, chiedi alla cassa."
+    }
+  ],
+  "prompts": {
+    "system_prompt": "Sei l'assistente virtuale di RossoTono Market Polla, un supermercato italiano di qualità situato a Polla (SA). Il tuo compito è aiutare i clienti con domande su: orari, posizione, prodotti, offerte, servizi e contatti.\n\nREGOLE:\n- Rispondi sempre in italiano, in modo cordiale e professionale\n- Usa emoji con moderazione per rendere le risposte più amichevoli\n- Se non sai qualcosa, indirizza il cliente al numero 0975 1902032\n- Non inventare mai informazioni, usa solo i dati forniti\n- Per domande sul volantino, invita sempre a cliccare sul link\n- Mantieni le risposte concise ma complete\n\nPERSONALITÀ:\n- Amichevole e disponibile\n- Esperto di prodotti alimentari italiani\n- Orgoglioso della qualità italiana\n- Pronto ad aiutare sempre",
+    "fallback_response": "Mi dispiace, non ho capito bene la tua domanda. Puoi chiedermi informazioni su:\n\n📰 Volantino e offerte\n🕐 Orari di apertura\n📍 Dove siamo e come raggiungerci\n📞 Contatti (telefono ed email)\n🛒 Servizi disponibili (macelleria, gastronomia, ecc.)\n💳 Metodi di pagamento\n\nOppure chiamaci al 0975 1902032!"
+  }
+}

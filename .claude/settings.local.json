@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.rossotono.it)",
+      "WebFetch(domain:rossotono-polla.netlify.app)",
+      "WebSearch",
+      "WebFetch(domain:promosulweb.it)",
+      "WebFetch(domain:www.google.com)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(GIT_TRACE=1 git push -u origin master)"
+    ]
+  }
+}

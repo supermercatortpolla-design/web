@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RossoTono Market Polla - Il Colore della Spesa Italiana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ========== BASE STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            background: #0c0c0c;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* ========== WRAPPER ========== */
+        .cinema-wrap {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: #0c0c0c;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .cinema-hero {
+            position: relative;
+            padding: 70px 24px 60px 24px;
+            text-align: center;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(225, 38, 28, 0.22), transparent 28%),
+                radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.06), transparent 20%),
+                linear-gradient(135deg, rgba(0, 0, 0, 0.72), rgba(20, 20, 20, 0.9)),
+                linear-gradient(180deg, #111111 0%, #090909 100%);
+            border-bottom: 4px solid #e1261c;
+        }
+
+        .cinema-hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.03) 50%, transparent 100%);
+            transform: skewY(-6deg);
+            pointer-events: none;
+        }
+
+        .cinema-topline {
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 999px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f1f1f1;
+            background: rgba(255, 255, 255, 0.04);
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cinema-logo {
+            max-width: 360px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px auto;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.45));
+        }
+
+        .cinema-logo-polla {
+            display: inline-block;
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            border-top: 3px solid #e1261c;
+            padding-top: 10px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+        }
+
+        .cinema-title {
+            max-width: 980px;
+            margin: 30px auto 14px auto;
+            font-size: 54px;
+            line-height: 1.05;
+            font-weight: 900;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 1px;
+        }
+
+        .cinema-title .red {
+            color: #e1261c;
+        }
+
+        .cinema-sub {
+            max-width: 860px;
+            margin: 0 auto 30px auto;
+            font-size: 19px;
+            line-height: 1.7;
+            color: #ececec;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ========== BUTTONS ========== */
+        .cinema-btns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cinema-btn {
+            display: inline-block;
+            padding: 15px 26px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 15px;
+            letter-spacing: 0.3px;
+            transition: all 0.2s ease;
+        }
+
+        .cinema-btn-primary {
+            background: #e1261c;
+            color: #ffffff !important;
+            border: 2px solid #e1261c;
+            box-shadow: 0 10px 25px rgba(225, 38, 28, 0.22);
+        }
+
+        .cinema-btn-secondary {
+            background: transparent;
+            color: #ffffff !important;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .cinema-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ========== INFO BAND ========== */
+        .cinema-band {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            padding: 22px 24px;
+            background: linear-gradient(180deg, #141414 0%, #101010 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .cinema-band-box {
+            background: #171717;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+        }
+
+        .cinema-band-box strong {
+            display: block;
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .cinema-band-box span {
+            color: #d3d3d3;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* ========== SECTIONS ========== */
+        .cinema-section {
+            padding: 54px 24px;
+        }
+
+        .cinema-section-title {
+            text-align: center;
+            margin: 0 0 10px 0;
+            font-size: 34px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .cinema-line {
+            width: 120px;
+            height: 4px;
+            background: #e1261c;
+            margin: 0 auto 24px auto;
+            border-radius: 999px;
+            box-shadow: 0 0 16px rgba(225, 38, 28, 0.3);
+        }
+
+        .cinema-lead {
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto 30px auto;
+            color: #dddddd;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* ========== GRID & CARDS ========== */
+        .cinema-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .cinema-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .cinema-card {
+            position: relative;
+            background: linear-gradient(180deg, #1b1b1b 0%, #131313 100%);
+            border-radius: 20px;
+            padding: 24px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+            overflow: hidden;
+        }
+
+        .cinema-card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #e1261c;
+        }
+
+        .cinema-card h3 {
+            margin: 0 0 12px 0;
+            font-size: 20px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .cinema-card p {
+            margin: 0;
+            color: #d8d8d8;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* Card with image placeholder */
+        .cinema-card-image {
+            height: 140px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .cinema-card-price {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .price-new {
+            font-size: 22px;
+            font-weight: 900;
+            color: #e1261c;
+        }
+
+        .cinema-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: #e1261c;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        /* ========== PREMIUM SECTION ========== */
+        .cinema-premium {
+            background:
+                radial-gradient(circle at top right, rgba(225, 38, 28, 0.14), transparent 26%),
+                linear-gradient(180deg, #111111 0%, #0b0b0b 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* ========== SOCIAL CARDS ========== */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .social-card {
+            position: relative;
+            background: linear-gradient(180deg, #1b1b1b 0%, #131313 100%);
+            border-radius: 20px;
+            padding: 30px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-card.instagram {
+            border-top: 4px solid #e1306c;
+        }
+
+        .social-card.tiktok {
+            border-top: 4px solid #00f2ea;
+        }
+
+        .social-card.facebook {
+            border-top: 4px solid #1877f2;
+        }
+
+        .social-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 16px auto;
+        }
+
+        .instagram .social-icon {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+
+        .tiktok .social-icon {
+            background: #000000;
+            color: white;
+            border: 2px solid #00f2ea;
+        }
+
+        .facebook .social-icon {
+            background: #1877f2;
+            color: white;
+        }
+
+        .social-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 20px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .social-handle {
+            color: #aaaaaa;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .instagram .social-link {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+
+        .tiktok .social-link {
+            background: #000000;
+            color: white;
+            border: 2px solid #00f2ea;
+        }
+
+        .facebook .social-link {
+            background: #1877f2;
+            color: white;
+        }
+
+        .social-link:hover {
+            transform: scale(1.05);
+        }
+
+        /* ========== GALLERY SECTION ========== */
+        .gallery-section {
+            padding: 54px 24px;
+            background: linear-gradient(180deg, #111111 0%, #0b0b0b 100%);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 4/3;
+            border-radius: 14px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent 60%, rgba(0,0,0,0.4));
+            pointer-events: none;
+        }
+
+        /* ========== MAP SECTION ========== */
+        .map-section {
+            padding: 54px 24px;
+            background: linear-gradient(180deg, #111111 0%, #0b0b0b 100%);
+        }
+
+        .map-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .map-info {
+            background: linear-gradient(180deg, #1b1b1b 0%, #131313 100%);
+            border-radius: 20px;
+            padding: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-info h3 {
+            margin: 0 0 14px 0;
+            font-size: 22px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .map-info p {
+            color: #d8d8d8;
+            line-height: 1.7;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* ========== CONTACTS ========== */
+        .contatti-section {
+            padding: 54px 24px;
+        }
+
+        .contatti-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contatto-card {
+            display: block;
+            background: linear-gradient(180deg, #1b1b1b 0%, #131313 100%);
+            border-radius: 20px;
+            padding: 28px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contatto-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border-color: #e1261c;
+        }
+
+        .contatto-icon {
+            width: 60px;
+            height: 60px;
+            background: #222;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #e1261c;
+            margin: 0 auto 14px auto;
+            transition: all 0.3s ease;
+        }
+
+        .contatto-card:hover .contatto-icon {
+            background: #e1261c;
+            color: white;
+        }
+
+        .contatto-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .contatto-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        /* Orari */
+        .orari-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .orari-section h4 {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .orari-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .orario-item {
+            text-align: center;
+        }
+
+        .orario-giorno {
+            font-weight: 600;
+            color: #999;
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .orario-orario {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cinema-cta {
+            text-align: center;
+            padding: 60px 24px 70px 24px;
+            background:
+                radial-gradient(circle at center, rgba(225, 38, 28, 0.18), transparent 35%),
+                linear-gradient(180deg, #131313 0%, #0a0a0a 100%);
+        }
+
+        .cinema-cta h2 {
+            margin: 0 0 14px 0;
+            font-size: 42px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .cinema-cta p {
+            max-width: 760px;
+            margin: 0 auto 26px auto;
+            color: #e2e2e2;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* ========== FOOTER ========== */
+        .cinema-footer {
+            padding: 24px 18px 34px 18px;
+            text-align: center;
+            font-size: 14px;
+            color: #bfbfbf;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            background: #0a0a0a;
+        }
+
+        .cinema-small {
+            color: #9f9f9f;
+            font-size: 13px;
+        }
+
+        /* ========== CHATBOT ========== */
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #e1261c 0%, #b01000 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(225, 38, 28, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-toggle.active {
+            transform: rotate(90deg);
+        }
+
+        .chatbot-container {
+            position: fixed;
+            bottom: 120px;
+            right: 30px;
+            width: 380px;
+            max-height: 520px;
+            background: #1a1a1a;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideUp 0.3s ease;
+        }
+
+        .chatbot-container.active {
+            display: flex;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, #e1261c 0%, #b01000 100%);
+            color: white;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chatbot-avatar {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .chatbot-title h4 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .chatbot-title span {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .chatbot-close {
+            margin-left: auto;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .chatbot-close:hover {
+            opacity: 1;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 18px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-height: 320px;
+        }
+
+        .message {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 1.5;
+            animation: fadeInUp 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.bot {
+            background: #2a2a2a;
+            color: #ffffff;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+
+        .message.user {
+            background: #e1261c;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .typing-indicator {
+            display: none;
+            align-self: flex-start;
+            background: #2a2a2a;
+            padding: 12px 16px;
+            border-radius: 16px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .typing-indicator.active {
+            display: flex;
+            gap: 4px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: #888;
+            border-radius: 50%;
+            animation: typingBounce 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typingBounce {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .chatbot-quick {
+            padding: 14px;
+            border-top: 1px solid #333;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .quick-btn {
+            background: #2a2a2a;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            color: #ddd;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .quick-btn:hover {
+            background: #e1261c;
+            color: white;
+        }
+
+        .chatbot-input {
+            padding: 14px;
+            border-top: 1px solid #333;
+            display: flex;
+            gap: 10px;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 12px 16px;
+            background: #2a2a2a;
+            border: 2px solid #333;
+            border-radius: 999px;
+            font-size: 14px;
+            color: white;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .chatbot-input input::placeholder {
+            color: #888;
+        }
+
+        .chatbot-input input:focus {
+            border-color: #e1261c;
+        }
+
+        .chatbot-input button {
+            width: 45px;
+            height: 45px;
+            background: #e1261c;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-input button:hover {
+            background: #b01000;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 980px) {
+            .cinema-grid,
+            .cinema-grid-4,
+            .social-grid,
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cinema-info {
+                grid-template-columns: 1fr;
+            }
+
+            .cinema-band {
+                grid-template-columns: 1fr;
+            }
+
+            .cinema-title {
+                font-size: 40px;
+            }
+
+            .map-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .map-info {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .cinema-title {
+                font-size: 30px;
+            }
+
+            .cinema-sub {
+                font-size: 16px;
+            }
+
+            .cinema-logo {
+                max-width: 260px;
+            }
+
+            .cinema-logo-polla {
+                font-size: 22px;
+                letter-spacing: 3px;
+            }
+
+            .cinema-grid,
+            .cinema-grid-4,
+            .social-grid,
+            .contatti-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cinema-section-title {
+                font-size: 26px;
+            }
+
+            .cinema-cta h2 {
+                font-size: 28px;
+            }
+
+            .orari-grid {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .chatbot-container {
+                width: calc(100vw - 40px);
+                right: 20px;
+                bottom: 110px;
+            }
+
+            .map-container {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cinema-wrap">
+        <!-- HERO SECTION -->
+        <section class="cinema-hero">
+            <div class="cinema-topline">RossoTono Market Polla</div>
+
+            <!-- Logo -->
+            <img src="https://www.rossotono.it/wp-content/uploads/2024/03/Logo-Rossotono-2024.png" alt="RossoTono Market" style="max-width: 340px; width: 100%; height: auto; display: block; margin: 0 auto 10px auto; filter: drop-shadow(0 4px 20px rgba(0,0,0,0.5));">
+
+            <h1 class="cinema-title">
+                Il colore della <span class="red">spesa italiana</span>
+            </h1>
+
+            <p class="cinema-sub">
+                Benvenuti da Rossotono Market Polla: un punto vendita dal carattere deciso,
+                moderno e accattivante, pensato per offrire qualità, convenienza e un'esperienza
+                d'acquisto che lascia il segno.
+            </p>
+
+            <div class="cinema-btns">
+                <a class="cinema-btn cinema-btn-primary" href="https://promosulweb.it/nuovaperturamarket/" target="_blank">
+                    <i class="fas fa-newspaper"></i> Sfoglia il Volantino
+                </a>
+                <a class="cinema-btn cinema-btn-secondary" href="https://maps.app.goo.gl/2vKNSY28oiyXcP2M9" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> Come raggiungerci
+                </a>
+            </div>
+        </section>
+
+        <!-- INFO BAND -->
+        <section class="cinema-band">
+            <div class="cinema-band-box">
+                <strong>Qualità</strong>
+                <span>Prodotti scelti con attenzione per una spesa affidabile ogni giorno.</span>
+            </div>
+            <div class="cinema-band-box">
+                <strong>Convenienza</strong>
+                <span>Promozioni e assortimento pensati per dare valore concreto al cliente.</span>
+            </div>
+            <div class="cinema-band-box">
+                <strong>Vicino a te</strong>
+                <span>Il punto di riferimento per la spesa a Polla.</span>
+            </div>
+        </section>
+
+        <!-- VOLANTINO SECTION -->
+        <section class="cinema-section" id="volantino">
+            <h2 class="cinema-section-title">Il Volantino</h2>
+            <div class="cinema-line"></div>
+            <p class="cinema-lead">
+                Scopri tutte le offerte della settimana e risparmia sulla tua spesa!
+            </p>
+
+            <div style="text-align: center; padding: 40px 20px;">
+                <div style="font-size: 5rem; margin-bottom: 20px;">
+                    📰
+                </div>
+                <h3 style="font-size: 28px; text-transform: uppercase; margin-bottom: 16px; color: #fff;">
+                    Offerte della Settimana
+                </h3>
+                <p style="color: #ccc; font-size: 17px; line-height: 1.7; max-width: 600px; margin: 0 auto 30px auto;">
+                    Clicca sul pulsante qui sotto per sfogliare il volantino completo con tutte le promozioni.
+                </p>
+                <a href="https://promosulweb.it/nuovaperturamarket/" target="_blank" class="cinema-btn cinema-btn-primary" style="padding: 20px 40px; font-size: 18px;">
+                    <i class="fas fa-book-open"></i> Sfoglia il Volantino
+                </a>
+            </div>
+        </section>
+
+        <!-- SOCIAL SECTION -->
+        <section class="cinema-section cinema-premium" id="social">
+            <h2 class="cinema-section-title">Seguici sui Social</h2>
+            <div class="cinema-line"></div>
+            <p class="cinema-lead">
+                Riman sempre aggiornato su novità, offerte e ricette dei nostri chef.
+            </p>
+
+            <div class="social-grid">
+                <div class="social-card instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p class="social-handle">@rossotono</p>
+                    <a href="https://instagram.com/rossotono" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i> Segui
+                    </a>
+                </div>
+                <div class="social-card tiktok">
+                    <div class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TikTok</h3>
+                    <p class="social-handle">@rossotonosupermercati</p>
+                    <a href="https://tiktok.com/@rossotonosupermercati" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok"></i> Segui
+                    </a>
+                </div>
+                <div class="social-card facebook">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p class="social-handle">Rossotono Supermercati</p>
+                    <a href="https://facebook.com/RossotonoSupermercati" target="_blank" class="social-link">
+                        <i class="fab fa-facebook-f"></i> Mi piace
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery-section">
+            <h2 class="cinema-section-title">La Nostra Struttura</h2>
+            <div class="cinema-line"></div>
+            <p class="cinema-lead">
+                Un ambiente moderno e accogliente per la tua spesa quotidiana.
+            </p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Foto/IMG-20260319-WA0006.jpg" alt="RossoTono Market Polla">
+                </div>
+                <div class="gallery-item">
+                    <img src="Foto/IMG-20260319-WA0007.jpg" alt="RossoTono Market Polla">
+                </div>
+                <div class="gallery-item">
+                    <img src="Foto/IMG-20260319-WA0009.jpg" alt="RossoTono Market Polla">
+                </div>
+                <div class="gallery-item">
+                    <img src="Foto/IMG-20260319-WA0010.jpg" alt="RossoTono Market Polla">
+                </div>
+                <div class="gallery-item">
+                    <img src="Foto/IMG-20260319-WA0012.jpg" alt="RossoTono Market Polla">
+                </div>
+                <div class="gallery-item">
+                    <img src="Foto/IMG-20260319-WA0019.jpg" alt="RossoTono Market Polla">
+                </div>
+                <div class="gallery-item">
+                    <img src="Foto/IMG-20260319-WA0022.jpg" alt="RossoTono Market Polla">
+                </div>
+                <div class="gallery-item">
+                    <img src="Foto/IMG-20260319-WA0024.jpg" alt="RossoTono Market Polla">
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP SECTION -->
+        <section class="map-section" id="mappa">
+            <h2 class="cinema-section-title">Dove Siamo</h2>
+            <div class="cinema-line"></div>
+
+            <div class="map-wrapper">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3025.15!2d15.5044!3d40.5146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sRossoTono%20Supermercato%20Polla!5e0!3m2!1sit!2sit!4v1704067200000!5m2!1sit!2sit"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="map-info">
+                    <h3>Rossotono Market Polla</h3>
+                    <p>Ti aspettiamo nel nostro punto vendita a Polla. Parcheggio gratuito disponibile.</p>
+                    <a href="https://www.google.com/maps/place/RossoTono+Supermercato+Polla/@40.5145571,15.5050355,292m/data=!3m1!1e3!4m6!3m5!1s0x13393ff213eb9b71:0xa008c901ec309788!8m2!3d40.5145759!4d15.5043953!16s%2Fg%2F11n55fytkr?entry=ttu&g_ep=EgoyMDI2MDQwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="cinema-btn cinema-btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-directions"></i> Indicazioni
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATTI SECTION -->
+        <section class="contatti-section" id="contatti">
+            <h2 class="cinema-section-title">Contattaci</h2>
+            <div class="cinema-line"></div>
+            <p class="cinema-lead">
+                Siamo qui per qualsiasi domanda o informazione.
+            </p>
+
+            <div class="contatti-grid">
+                <a href="tel:+3909751902032" class="contatto-card">
+                    <div class="contatto-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contatto-label">Telefono</div>
+                    <div class="contatto-value">0975 1902032</div>
+                </a>
+                <a href="mailto:supermercatort.polla@gmail.com" class="contatto-card">
+                    <div class="contatto-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contatto-label">Email</div>
+                    <div class="contatto-value">Scrivici</div>
+                </a>
+            </div>
+
+            <div class="orari-section">
+                <h4><i class="far fa-clock"></i> Orari di Apertura</h4>
+                <div class="orari-grid">
+                    <div class="orario-item">
+                        <div class="orario-giorno">Lun - Sab</div>
+                        <div class="orario-orario">08:00 - 20:30</div>
+                    </div>
+                    <div class="orario-item">
+                        <div class="orario-giorno">Domenica</div>
+                        <div class="orario-orario">09:00 - 13:00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cinema-cta">
+            <h2>Ti aspettiamo da RossoTono</h2>
+            <p>
+                Vieni a vivere una spesa più moderna, più curata e più coinvolgente.
+                Il tuo nuovo punto di riferimento ti aspetta.
+            </p>
+            <div class="cinema-btns">
+                <a class="cinema-btn cinema-btn-primary" href="https://promosulweb.it/nuovaperturamarket/" target="_blank">
+                    <i class="fas fa-book-open"></i> Sfoglia il Volantino
+                </a>
+                <a class="cinema-btn cinema-btn-secondary" href="https://maps.app.goo.gl/2vKNSY28oiyXcP2M9" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> Raggiungici
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <div class="cinema-footer">
+            RossoTono Market Polla · Via Cotrazzo 2, 84038 Polla (SA)<br>
+            <span class="cinema-small">© 2026 RossoTono Market - Affiliato RossoTono</span>
+        </div>
+    </div>
+
+    <!-- CHATBOT -->
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chatbot-title">
+                <h4>Assistenza RossoTono</h4>
+                <span>Online</span>
+            </div>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot">
+                Ciao! Sono l'assistente di RossoTono Market Polla. Come posso aiutarti?
+            </div>
+        </div>
+        <div class="typing-indicator" id="typingIndicator">
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+        </div>
+        <div class="chatbot-quick">
+            <button class="quick-btn" data-question="volantino">📰 Volantino</button>
+            <button class="quick-btn" data-question="orari">🕐 Orari</button>
+            <button class="quick-btn" data-question="dove">📍 Dove siete</button>
+            <button class="quick-btn" data-question="contatti">📞 Contatti</button>
+            <button class="quick-btn" data-question="promozioni">🏷️ Promozioni</button>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Scrivi un messaggio...">
+            <button id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Chatbot functionality
+        const chatbotToggle = document.getElementById('chatbotToggle');
+        const chatbotContainer = document.getElementById('chatbotContainer');
+        const chatbotClose = document.getElementById('chatbotClose');
+        const chatbotInput = document.getElementById('chatbotInput');
+        const chatbotSend = document.getElementById('chatbotSend');
+        const chatbotMessages = document.getElementById('chatbotMessages');
+        const typingIndicator = document.getElementById('typingIndicator');
+        const quickBtns = document.querySelectorAll('.quick-btn');
+
+        chatbotToggle.addEventListener('click', () => {
+            chatbotContainer.classList.toggle('active');
+            chatbotToggle.classList.toggle('active');
+        });
+
+        chatbotClose.addEventListener('click', () => {
+            chatbotContainer.classList.remove('active');
+            chatbotToggle.classList.remove('active');
+        });
+
+        function addMessage(text, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message ' + (isUser ? 'user' : 'bot');
+            messageDiv.textContent = text;
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function showTyping() {
+            typingIndicator.classList.add('active');
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function hideTyping() {
+            typingIndicator.classList.remove('active');
+        }
+
+        function getBotResponse(userMessage) {
+            const msg = userMessage.toLowerCase();
+
+            // Greetings
+            if (msg.includes('ciao') || msg.includes('buongiorno') || msg.includes('buonasera') || msg.includes('salve') || msg.includes('hello')) {
+                return "Ciao! Benvenuto da RossoTono Market Polla! Sono qui per aiutarti. Cosa vorresti sapere?";
+            }
+
+            // Volantino / Offerte
+            if (msg.includes('volantino') || msg.includes('offerta') || msg.includes('scont') || msg.includes('promozion') || msg.includes('prezzo')) {
+                return "📰 Clicca sul pulsante 'Sfoglia il Volantino' per vedere tutte le offerte della settimana!\n\nIl volantino si apre in una nuova pagina con tutte le promozioni attive.";
+            }
+
+            // Orari
+            if (msg.includes('orari') || msg.includes('apert') || msg.includes('chiuso') || msg.includes('orario')) {
+                return "🕐 I nostri orari:\n\n📅 Lunedì - Sabato: 08:00 - 20:30\n📅 Domenica: 09:00 - 13:00\n\nTi aspettiamo!";
+            }
+
+            // Dove / Indirizzo / Mappa
+            if (msg.includes('dove') || msg.includes('indirizzo') || msg.includes('mappa') || msg.includes('polla') || msg.includes('ubicazione')) {
+                return "📍 Ci trovi a Polla (SA)!\n\n📌 Via Cotrazzo 2, 84038 Polla SA, Polla (SA)\n\nClicca su 'Indicazioni' nella sezione mappa per navigare direttamente da Google Maps.";
+            }
+
+            // Contatti / Telefono
+            if (msg.includes('contatt') || msg.includes('telefono') || msg.includes('mail') || msg.includes('cellulare')) {
+                return "📞 I nostri contatti:\n\n📱 Telefono: 0975 1902032\n📧 Email: supermercatort.polla@gmail.com\n\nClicca sui pulsanti per chiamarci o scriverci!";
+            }
+
+            // Promozioni
+            if (msg.includes('promozion') || msg.includes('conveniente') || msg.includes('risparmio')) {
+                return "🏷️ Clicca su 'Sfoglia il Volantino' per vedere tutte le offerte e le promozioni della settimana!";
+            }
+
+            // Qualità prodotti
+            if (msg.includes('qualità') || msg.includes('fresco') || msg.includes('italiano') || msg.includes('dop')) {
+                return "✅ Da RossoTono la qualità è garantita!\n\n🔸 Tutti i prodotti sono rigorosamente italiani\n🔸 Carne da filiera certificata\n🔸 Parmigiano Reggiano DOP\n🔸 Gastronomia artigianale\n\nLa qualità è il nostro punto di forza!";
+            }
+
+            // Grazie
+            if (msg.includes('grazie') || msg.includes('grazie mille') || msg.includes('ok') || msg.includes('perfetto')) {
+                return "😊 Di nulla! È un piacere aiutarti!\n\nBuona spesa da RossoTono! 🛒";
+            }
+
+            // Default
+            return "Non ho capito bene. Prova a chiedere di:\n\n📰 Volantino e offerte\n🕐 Orari di apertura\n📍 Dove siamo\n📞 Contatti\n🏷️ Promozioni\n\nOppure clicca sui pulsanti qui sotto!";
+        }
+
+        function handleUserMessage() {
+            const message = chatbotInput.value.trim();
+            if (!message) return;
+
+            addMessage(message, true);
+            chatbotInput.value = '';
+
+            showTyping();
+
+            setTimeout(() => {
+                hideTyping();
+                const response = getBotResponse(message);
+                addMessage(response, false);
+            }, 1000 + Math.random() * 500);
+        }
+
+        chatbotSend.addEventListener('click', handleUserMessage);
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleUserMessage();
+            }
+        });
+
+        quickBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const question = btn.dataset.question;
+                addMessage(btn.textContent, true);
+
+                showTyping();
+                setTimeout(() => {
+                    hideTyping();
+                    const response = getBotResponse(question);
+                    addMessage(response, false);
+                }, 1000);
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
