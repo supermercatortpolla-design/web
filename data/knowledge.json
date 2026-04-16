@@ -5,14 +5,15 @@
     "address": "Via Cotrazzo 2, 84038 Polla (SA)",
     "phone": "0975 1902032",
     "email": "supermercatort.polla@gmail.com",
-    "website": "https://www.rossotono.it",
+    "website": "https://rossotono-polla.netlify.app/",
     "flyer_url": "https://promosulweb.it/nuovaperturamarket/"
   },
   "hours": {
-    "weekday": "08:00 - 20:30",
+    "weekday": "08:30 - 20:00",
     "weekday_label": "Lunedì - Sabato",
-    "sunday": "09:00 - 13:00",
-    "sunday_label": "Domenica"
+    "sunday": "08:30 - 12:00",
+    "sunday_label": "Domenica",
+    "note": "Orari festivi variabili - contattare il negozio"
   },
   "location": {
     "city": "Polla",
@@ -30,99 +31,162 @@
     "tiktok": "https://tiktok.com/@rossotonosupermercati",
     "facebook": "https://facebook.com/RossotonoSupermercati"
   },
+  "departments": [
+    "Frutta e Verdura",
+    "Gastronomia e piatti pronti",
+    "Macelleria con banco assistito",
+    "Macelleria Self",
+    "Panetteria",
+    "Salumi e formaggi",
+    "Surgelati",
+    "Vini e liquori",
+    "Pet"
+  ],
   "services": {
     "parking": true,
-    "parking_notes": "Parcheggio gratuito disponibile",
+    "parking_note": "Parcheggio gratuito disponibile",
     "bancomat_pos": true,
     "credit_cards": true,
-    "electronic_receipt": true,
-    "phone_recharge": false,
+    "contactless": true,
+    "buoni_pasto": true,
+    "ticket_restaurant": true,
+    "ricariche_telefoniche": true,
+    "pagamento_bollette": true,
+    "app_speasy": true,
     "home_delivery": false,
-    "gastronomia": true,
-    "gastronomia_notes": "Gastronomia artigianale con prodotti freschi preparati daily",
-    "macelleria": true,
-    "macelleria_notes": "Carne da filiera certificata, macelleria al banco",
-    "pescheria": false,
-    "panetteria": true,
-    "prodotti_freschi": true,
-    "prodotti_italiani": true,
-    "dop_products": true,
-    "dop_notes": "Parmigiano Reggiano DOP e altri prodotti certificati"
+    "e_commerce": false
   },
   "payment_methods": [
     "Contanti",
     "Bancomat",
     "Carte di credito (Visa, Mastercard)",
-    "POS"
-  ],
-  "values": [
-    "Qualità italiana garantita",
-    "Prodotti rigorosamente italiani",
-    "Convenienza senza compromessi",
-    "Freschezza quotidiana"
+    "Carte di debito",
+    "Contactless",
+    "Buoni pasto",
+    "Ticket Restaurant"
   ],
   "products_highlight": [
     {
       "category": "Gastronomia",
-      "description": "Prodotti freschi preparati daily, specialità locali"
+      "items": ["Prosciutto di Parma", "Parmigiano 30 mesi", "Grana Padano 20 mesi", "Mortadella", "Bresaola", "Capocollo", "Prosciutto cotto"]
     },
     {
       "category": "Macelleria",
-      "description": "Carne da filiera certificata, tagli su richiesta"
+      "note": "Banco assistito + self service, carne da filiera certificata"
     },
     {
-      "category": "Parmigiano Reggiano DOP",
-      "description": "Parmigiano di qualità superiore"
+      "category": "Vini e Liquori",
+      "note": "Selezione vini Rossotono legati all'eccellenza vinicola pugliese"
     },
     {
-      "category": "Prodotti RT",
-      "description": "Marchio proprio RossoTono, qualità a prezzo conveniente"
+      "category": "Marchi",
+      "items": ["Selezione Rossotono (premium)", "Linea RT (qualità a prezzo competitivo)"]
     }
+  ],
+  "values": [
+    "Affidabilità",
+    "Convenienza",
+    "Qualità",
+    "Controllo qualità giornaliero",
+    "Filiera certificata per la carne",
+    "Eccellenze gastronomiche italiane"
   ],
   "faq": [
     {
-      "question": "Quali sono gli orari di apertura?",
-      "answer": "Siamo aperti da Lunedì a Sabato dalle 08:00 alle 20:30. La Domenica siamo aperti dalle 09:00 alle 13:00."
+      "category": "Orari e Apertura",
+      "questions": [
+        {"q": "Quali sono gli orari di apertura?", "a": "Siamo aperti dal Lunedì al Sabato dalle 08:30 alle 20:00. La Domenica siamo aperti dalle 08:30 alle 12:00."},
+        {"q": "Siete aperti la domenica?", "a": "Sì, siamo aperti la domenica con orario 08:30 - 12:00."},
+        {"q": "Siete aperti i festivi?", "a": "Per i giorni festivi e le vigilie gli orari possono variare. Ti consigliamo di contattarci al 0975 1902032 per confermare gli orari specifici."},
+        {"q": "Quando chiudete per ferie?", "a": "Non abbiamo periodi standard di chiusura per ferie. Per eventuali variazioni straordinarie, segui i nostri avvisi in negozio o sui social."}
+      ]
     },
     {
-      "question": "Dove vi trovate?",
-      "answer": "Ci troviamo a Polla (SA), in Via Cotrazzo 2, CAP 84038. Abbiamo un parcheggio gratuito per i clienti."
+      "category": "Posizione e Contatti",
+      "questions": [
+        {"q": "Dove vi trovate?", "a": "Ci troviamo a Polla (SA), in Via Cotrazzo 2, CAP 84038. Disponiamo di parcheggio gratuito per i clienti."},
+        {"q": "Come posso contattarvi?", "a": "Puoi chiamarci al 0975 1902032 oppure scriverci una email a supermercatort.polla@gmail.com"},
+        {"q": "Avete il parcheggio?", "a": "Sì, disponiamo di un parcheggio gratuito per tutti i nostri clienti."},
+        {"q": "Come arrivo a RossoTono Polla?", "a": "Imposta il navigatore su Via Cotrazzo 2, Polla (SA). Per indicazioni stradali puoi usare il link Google Maps sul nostro sito."}
+      ]
     },
     {
-      "question": "Come posso contattarvi?",
-      "answer": "Puoi chiamarci al numero 0975 1902032 oppure scriverci una email a supermercatort.polla@gmail.com."
+      "category": "Volantino e Offerte",
+      "questions": [
+        {"q": "Dove trovo il volantino?", "a": "Il volantino è consultabile online! Clicca sul pulsante 'Sfoglia il Volantino' sul nostro sito https://rossotono-polla.netlify.app/ o visita https://promosulweb.it/nuovaperturamarket/"},
+        {"q": "Avete promozioni questa settimana?", "a": "Le promozioni attive sono sempre visibili nel nostro volantino online! Clicca su 'Sfoglia il Volantino' per scoprire tutte le offerte della settimana."},
+        {"q": "Quanto durano le offerte?", "a": "La durata delle offerte dipende dalla validità del volantino. Controlla sempre le date di validità sul volantino online."}
+      ]
     },
     {
-      "question": "Dove posso vedere le offerte?",
-      "answer": "Puoi consultare il volantino online cliccando sul pulsante 'Sfoglia il Volantino' nella homepage. Aggiorniamo le offerte settimanalmente!"
+      "category": "Prodotti e Reparti",
+      "questions": [
+        {"q": "Quali reparti avete?", "a": "I nostri reparti: Frutta e Verdura, Gastronomia e piatti pronti, Macelleria con banco assistito, Macelleria Self, Panetteria, Salumi e formaggi, Surgelati, Vini e liquori, Pet."},
+        {"q": "Avete la macelleria?", "a": "Sì, abbiamo la macelleria sia con banco assistito che self service. Carne da filiera certificata."},
+        {"q": "Avete la gastronomia?", "a": "Sì! Abbiamo il reparto Gastronomia e piatti pronti con: Prosciutto di Parma, Parmigiano 30 mesi, Grana Padano, mortadella, bresaola, capocollo e molto altro."},
+        {"q": "Avete la panetteria?", "a": "Sì, abbiamo il reparto Panetteria. Per l'assortimento del giorno e gli orari di sfornata, chiedi direttamente in negozio."},
+        {"q": "Avete prodotti tipici?", "a": "Sì! Valorizziamo eccellenze italiane come Prosciutto di Parma, Parmigiano, Grana Padano e una selezione di vini Rossotono legati al territorio pugliese."},
+        {"q": "Avete prodotti senza glutine?", "a": "Come supermercato completo, possiamo avere prodotti per esigenze alimentari specifiche. Per la disponibilità attuale, chiedi in negozio."}
+      ]
     },
     {
-      "question": "Accettate pagamenti con carta?",
-      "answer": "Sì, accettiamo Bancomat, carte di credito (Visa, Mastercard) e pagamenti in contanti."
+      "category": "Pagamenti",
+      "questions": [
+        {"q": "Quali metodi di pagamento accettate?", "a": "Accettiamo: Contanti, Bancomat, Carte di credito (Visa, Mastercard), Pagamenti contactless, Buoni pasto e Ticket Restaurant."},
+        {"q": "Accettate Apple Pay o Google Pay?", "a": "Sì, accettiamo pagamenti contactless compatibili con il nostro POS, inclusi Apple Pay e Google Pay."},
+        {"q": "Accettate buoni pasto?", "a": "Sì! Accettiamo buoni pasto e Ticket Restaurant. Per circuiti specifici, verifica in cassa."}
+      ]
     },
     {
-      "question": "Avete il parcheggio?",
-      "answer": "Sì, disponiamo di un parcheggio gratuito per tutti i nostri clienti."
+      "category": "Servizi",
+      "questions": [
+        {"q": "Quali servizi offrite?", "a": "I nostri servizi: Parcheggio gratuito, Ricariche telefoniche, Pagamento bollette, Carte di credito, Buoni pasto, Domenica aperti, Orario continuato, App Speasy."},
+        {"q": "Fate consegne a domicilio?", "a": "Al momento non offriamo servizio di consegna a domicilio. Vieni a trovarci in negozio!"},
+        {"q": "Posso ordinare vassoi per feste?", "a": "Per ordini speciali, vassoi, cesti o preparazioni per feste, contattaci direttamente al negozio al 0975 1902032."}
+      ]
     },
     {
-      "question": "Quali servizi offrite?",
-      "answer": "Offriamo: Macelleria con carne da filiera certificata, Gastronomia artigianale, Panetteria, Prodotti DOP come Parmigiano Reggiano, e una vasta selezione di prodotti italiani di qualità."
+      "category": "Social e Online",
+      "questions": [
+        {"q": "Avete Instagram?", "a": "Sì! Seguici su Instagram: @rossotono"},
+        {"q": "Avete Facebook?", "a": "Sì! La nostra pagina Facebook è: Rossotono Supermercati"},
+        {"q": "Avete TikTok?", "a": "Sì! Il nostro TikTok è: @rossotonosupermercati"},
+        {"q": "Avete un sito web?", "a": "Sì! Il nostro sito è: https://rossotono-polla.netlify.app/"}
+      ]
     },
     {
-      "question": "Fate consegne a domicilio?",
-      "answer": "Al momento non offriamo servizio di consegna a domicilio, ma siamo sempre disponibili per eventuali esigenze particolari - contattaci!"
+      "category": "Reclami e Assistenza",
+      "questions": [
+        {"q": "Come faccio un reclamo?", "a": "Per reclami o segnalazioni, rivolgiti direttamente al personale in negozio oppure usa la pagina Contatti del sito Rossotono ufficiale."},
+        {"q": "Ho un problema con un prodotto", "a": "Porta il prodotto e lo scontrino in negozio. Il nostro personale sarà felice di aiutarti!"},
+        {"q": "Posso cambiare un prodotto?", "a": "Sì, rivolgendoti al personale del punto vendita con lo scontrino di acquisto."}
+      ]
     },
     {
-      "question": "Avete prodotti senza glutine?",
-      "answer": "Sì, abbiamo una sezione dedicata ai prodotti senza glutine e per celiaci. Chiedi al nostro personale per essere indirizzato."
+      "category": "Accessibilità e Animali",
+      "questions": [
+        {"q": "Il negozio è accessibile ai disabili?", "a": "Sì, il nostro personale può supportarti in caso di necessità. Per dettagli su rampe o bagni dedicati, chiedi in negozio."},
+        {"q": "Posso entrare con il cane?", "a": "Per motivi igienico-sanitari, la policy sugli animali va verificata direttamente in negozio prima della visita."}
+      ]
     },
     {
-      "question": "Posso pagare con il telefonino?",
-      "answer": "Attualmente accettiamo Bancomat, carte di credito e contanti. Per pagamenti contactless con smartphone, chiedi alla cassa."
+      "category": "Marchi e Qualità",
+      "questions": [
+        {"q": "Quali marche vendete?", "a": "Offriamo due livelli: la Selezione Rossotono (eccellenze gastronomiche e freschi premium) e la linea RT (qualità a prezzo competitivo), oltre a marchi nazionali."},
+        {"q": "I prodotti sono freschi?", "a": "Sì! Effettuiamo controllo qualità giornaliero e lavoriamo con filiera certificata per la carne."},
+        {"q": "Da dove arrivano i prodotti?", "a": "Rossotono privilegia produttori italiani con attenzione a qualità e filiera certificata."}
+      ]
+    },
+    {
+      "category": "Prezzi e Convenienza",
+      "questions": [
+        {"q": "I prezzi sono convenienti?", "a": "Sì! La nostra proposta si basa su convenienza e rapporto qualità-prezzo. Controlla il volantino per le migliori offerte!"},
+        {"q": "Fate prezzi all'ingrosso?", "a": "Siamo un supermercato al dettaglio, non un cash & carry all'ingrosso."}
+      ]
     }
   ],
   "prompts": {
-    "system_prompt": "Sei l'assistente virtuale di RossoTono Market Polla, un supermercato italiano di qualità situato a Polla (SA). Il tuo compito è aiutare i clienti con domande su: orari, posizione, prodotti, offerte, servizi e contatti.\n\nREGOLE:\n- Rispondi sempre in italiano, in modo cordiale e professionale\n- Usa emoji con moderazione per rendere le risposte più amichevoli\n- Se non sai qualcosa, indirizza il cliente al numero 0975 1902032\n- Non inventare mai informazioni, usa solo i dati forniti\n- Per domande sul volantino, invita sempre a cliccare sul link\n- Mantieni le risposte concise ma complete\n\nPERSONALITÀ:\n- Amichevole e disponibile\n- Esperto di prodotti alimentari italiani\n- Orgoglioso della qualità italiana\n- Pronto ad aiutare sempre",
-    "fallback_response": "Mi dispiace, non ho capito bene la tua domanda. Puoi chiedermi informazioni su:\n\n📰 Volantino e offerte\n🕐 Orari di apertura\n📍 Dove siamo e come raggiungerci\n📞 Contatti (telefono ed email)\n🛒 Servizi disponibili (macelleria, gastronomia, ecc.)\n💳 Metodi di pagamento\n\nOppure chiamaci al 0975 1902032!"
+    "system_prompt": "Sei l'assistente virtuale di RossoTono Market Polla, un supermercato italiano di qualità situato a Polla (SA).\n\nINFORMAZIONI CHIAVE:\n- Indirizzo: Via Cotrazzo 2, 84038 Polla (SA)\n- Telefono: 0975 1902032\n- Email: supermercatort.polla@gmail.com\n- Sito web: https://rossotono-polla.netlify.app/\n- Volantino: https://promosulweb.it/nuovaperturamarket/\n\nORARI:\n- Lunedì - Sabato: 08:30 - 20:00\n- Domenica: 08:30 - 12:00\n\nREPARTI:\nFrutta e Verdura, Gastronomia, Macelleria, Panetteria, Salumi e formaggi, Surgelati, Vini e liquori, Pet\n\nSERVIZI:\nParcheggio gratuito, Ricariche telefoniche, Pagamento bollette, Carte di credito, Buoni pasto, App Speasy\n\nPAGAMENTI:\nContanti, Bancomat, Carte di credito, Contactless (Apple Pay, Google Pay), Buoni pasto, Ticket Restaurant\n\nREGOLE:\n- Rispondi SEMPRE in italiano\n- Sii cordiale e professionale\n- Usa emoji con moderazione\n- Per prodotti specifici, invita a verificare in negozio\n- Non inventare mai informazioni\n- Per il volantino, rimanda sempre al link\n- Mantieni le risposte concise ma complete",
+    "fallback_response": "Mi dispiace, non ho capito bene la tua domanda. Posso aiutarti con:\n\n📰 Volantino e offerte\n🕐 Orari di apertura\n📍 Dove siamo\n📞 Contatti\n🛒 Reparti e prodotti\n💳 Metodi di pagamento\n🛍️ Servizi disponibili\n\nOppure chiamaci al 0975 1902032!"
   }
 }
