@@ -28,10 +28,198 @@
             background: #0c0c0c;
         }
 
+        /* ========== HEADER STICKY ========== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-logo span {
+            color: #e1261c;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .header-nav a {
+            color: #d0d0d0;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .header-nav a:hover {
+            color: #e1261c;
+        }
+
+        .header-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #e1261c;
+            transition: width 0.2s ease;
+        }
+
+        .header-nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #e1261c;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+
+        .header-cta:hover {
+            background: #b01000;
+            transform: translateY(-1px);
+        }
+
+        .header-cta::after {
+            display: none !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: #ffffff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(12px);
+            padding: 24px;
+            flex-direction: column;
+            gap: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            animation: slideDown 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .mobile-menu a {
+            color: #d0d0d0;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: color 0.2s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #e1261c;
+        }
+
+        .mobile-menu .header-cta {
+            margin-top: 12px;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .header-inner {
+                height: 60px;
+            }
+        }
+
         /* ========== HERO SECTION ========== */
         .cinema-hero {
-            position: relative;
-            padding: 70px 24px 60px 24px;
+            padding: 120px 24px 60px 24px;
             text-align: center;
             overflow: hidden;
             background:
@@ -40,6 +228,39 @@
                 linear-gradient(135deg, rgba(0, 0, 0, 0.72), rgba(20, 20, 20, 0.9)),
                 linear-gradient(180deg, #111111 0%, #090909 100%);
             border-bottom: 4px solid #e1261c;
+            position: relative;
+        }
+
+        .floating-elements {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-item {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.15;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .floating-item:nth-child(1) { top: 15%; left: 5%; animation-delay: 0s; }
+        .floating-item:nth-child(2) { top: 25%; right: 8%; animation-delay: 1.5s; }
+        .floating-item:nth-child(3) { top: 60%; left: 3%; animation-delay: 3s; }
+        .floating-item:nth-child(4) { top: 70%; right: 5%; animation-delay: 4.5s; }
+        .floating-item:nth-child(5) { top: 40%; left: 8%; animation-delay: 2s; }
+        .floating-item:nth-child(6) { top: 50%; right: 3%; animation-delay: 5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        @media (max-width: 768px) {
+            .floating-elements {
+                display: none;
+            }
         }
 
         .cinema-hero:before {
@@ -425,6 +646,39 @@
 
         .social-link:hover {
             transform: scale(1.05);
+        }
+
+        /* ========== VOLANTINO FLIP ========== */
+        .volantino-wrapper {
+            perspective: 1000px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .volantino-card {
+            background: linear-gradient(180deg, #1b1b1b 0%, #131313 100%);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            transition: transform 0.6s ease;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .volantino-card:hover {
+            transform: rotateY(8deg) scale(1.02);
+        }
+
+        .volantino-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #e1261c, #ff4444, #e1261c);
+            border-radius: 20px 20px 0 0;
         }
 
         /* ========== GALLERY SECTION ========== */
@@ -996,9 +1250,49 @@
     </style>
 </head>
 <body>
+    <!-- HEADER STICKY -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="header-logo">
+                <span>Rosso</span>Tono
+            </a>
+            <nav class="header-nav">
+                <a href="#">Home</a>
+                <a href="#volantino">Volantino</a>
+                <a href="#social">Social</a>
+                <a href="#contatti">Contatti</a>
+                <a href="https://promosulweb.it/nuovaperturamarket/" target="_blank" class="header-cta">
+                    <i class="fas fa-newspaper"></i> Sfoglia il Volantino
+                </a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <a href="#">Home</a>
+            <a href="#volantino">Volantino</a>
+            <a href="#social">Social</a>
+            <a href="#contatti">Contatti</a>
+            <a href="https://promosulweb.it/nuovaperturamarket/" target="_blank" class="header-cta">
+                <i class="fas fa-newspaper"></i> Sfoglia il Volantino
+            </a>
+        </nav>
+    </header>
+
     <div class="cinema-wrap">
         <!-- HERO SECTION -->
         <section class="cinema-hero">
+            <div class="floating-elements">
+                <div class="floating-item">🍖</div>
+                <div class="floating-item">🍷</div>
+                <div class="floating-item">🧀</div>
+                <div class="floating-item">🥖</div>
+                <div class="floating-item">🥩</div>
+                <div class="floating-item">🍎</div>
+            </div>
             <div class="cinema-topline">RossoTono Market Polla</div>
 
             <!-- Logo -->
@@ -1048,19 +1342,23 @@
                 Scopri tutte le offerte della settimana e risparmia sulla tua spesa!
             </p>
 
-            <div style="text-align: center; padding: 40px 20px;">
-                <div style="font-size: 5rem; margin-bottom: 20px;">
-                    📰
+            <div class="volantino-wrapper">
+                <div class="volantino-card">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="font-size: 5rem; margin-bottom: 20px;">
+                            📰
+                        </div>
+                        <h3 style="font-size: 28px; text-transform: uppercase; margin-bottom: 16px; color: #fff;">
+                            Offerte della Settimana
+                        </h3>
+                        <p style="color: #ccc; font-size: 17px; line-height: 1.7; max-width: 600px; margin: 0 auto 30px auto;">
+                            Clicca sul pulsante qui sotto per sfogliare il volantino completo con tutte le promozioni.
+                        </p>
+                        <a href="https://promosulweb.it/nuovaperturamarket/" target="_blank" class="cinema-btn cinema-btn-primary" style="padding: 20px 40px; font-size: 18px;">
+                            <i class="fas fa-book-open"></i> Sfoglia il Volantino
+                        </a>
+                    </div>
                 </div>
-                <h3 style="font-size: 28px; text-transform: uppercase; margin-bottom: 16px; color: #fff;">
-                    Offerte della Settimana
-                </h3>
-                <p style="color: #ccc; font-size: 17px; line-height: 1.7; max-width: 600px; margin: 0 auto 30px auto;">
-                    Clicca sul pulsante qui sotto per sfogliare il volantino completo con tutte le promozioni.
-                </p>
-                <a href="https://promosulweb.it/nuovaperturamarket/" target="_blank" class="cinema-btn cinema-btn-primary" style="padding: 20px 40px; font-size: 18px;">
-                    <i class="fas fa-book-open"></i> Sfoglia il Volantino
-                </a>
             </div>
         </section>
 
@@ -1196,11 +1494,11 @@
                 <div class="orari-grid">
                     <div class="orario-item">
                         <div class="orario-giorno">Lun - Sab</div>
-                        <div class="orario-orario">08:00 - 20:30</div>
+                        <div class="orario-orario">08:30 - 20:00</div>
                     </div>
                     <div class="orario-item">
                         <div class="orario-giorno">Domenica</div>
-                        <div class="orario-orario">09:00 - 13:00</div>
+                        <div class="orario-orario">08:30 - 12:00</div>
                     </div>
                 </div>
             </div>
@@ -1273,5 +1571,23 @@
     </div>
 
 <script src="js/chatbot.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+    });
+});
+</script>
 </body>
 </html>

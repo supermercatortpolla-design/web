@@ -159,25 +159,25 @@
 ## 4. Acceptance Criteria
 
 ### Visual Checkpoints
-- [ ] Header is sticky and visible on scroll
-- [ ] Hero section has animated floating elements
-- [ ] Volantino cards display with flip hover effect
-- [ ] Social cards scale on hover
-- [ ] Chatbot button is always visible (fixed position)
-- [ ] Map is embedded and interactive
-- [ ] Contact buttons trigger native actions (call/mail)
-- [ ] All sections have proper spacing and visual hierarchy
-- [ ] Mobile layout is fully responsive
+- [x] Header is sticky and visible on scroll
+- [x] Hero section has animated floating elements
+- [x] Volantino cards display with flip hover effect
+- [x] Social cards scale on hover
+- [x] Chatbot button is always visible (fixed position)
+- [x] Map is embedded and interactive
+- [x] Contact buttons trigger native actions (call/mail)
+- [x] All sections have proper spacing and visual hierarchy
+- [x] Mobile layout is fully responsive
 
 ### Functional Checkpoints
-- [ ] Navigation links scroll to correct sections
-- [ ] Chatbot opens/closes properly
-- [ ] Chatbot responds to quick reply buttons
-- [ ] Chatbot responds to keyword matches
-- [ ] Social links open correct URLs in new tabs
-- [ ] "Indicazioni" opens Google Maps
-- [ ] Phone link triggers call dialog
-- [ ] Email link triggers mail client
+- [x] Navigation links scroll to correct sections
+- [x] Chatbot opens/closes properly
+- [x] Chatbot responds to quick reply buttons
+- [x] Chatbot responds to keyword matches
+- [x] Social links open correct URLs in new tabs
+- [x] "Indicazioni" opens Google Maps
+- [x] Phone link triggers call dialog
+- [x] Email link triggers mail client
 
 ### Deployment
 - [ ] All assets work as static files
